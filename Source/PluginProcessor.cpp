@@ -217,7 +217,8 @@ void SimpleEQAudioProcessor::setStateInformation (const void* data, int sizeInBy
     // whose contents will have been created by the getStateInformation() call.
 }
 
-ChainSettings getChainSettings(juce::AudioProcessorValueTreeState& apvts) {
+ChainSettings getChainSettings(juce::AudioProcessorValueTreeState& apvts)
+{
     ChainSettings settings;
     settings.lowCutFreq = apvts.getRawParameterValue("LowCut Freq")->load();
     settings.highCutFreq = apvts.getRawParameterValue("HighCut Freq")->load();
